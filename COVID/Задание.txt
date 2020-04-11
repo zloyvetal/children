@@ -1,0 +1,27 @@
+1.1 Пройти квик старты для библиотек:
+https://flask.palletsprojects.com/en/1.1.x/quickstart/
+http://docs.peewee-orm.com/en/latest/peewee/quickstart.html#quickstart
+
+1.2 Разобратся с REST API - https://www.restapitutorial.com/
+
+2.1 В момент запуска сервера, скачать актуальные данные по ссылке https://pomber.github.io/covid19/timeseries.json
+2.2 Скачанные данные положить в базу данных
+
+3 Написать веб-сервер для получения данных о коронавирусе из БД (sqlite), при помощи REST API
+3.1 /
+должен возвращать данные: {'service': <name of service>, 'debug': <current debug flag>, 'host': <name of host machine>}
+
+3.2 /{country_name}/{date}
+данные за конкретный день по указанной стране
+
+3.3 /total/{date}
+данные по всем странам по указанной дате
+
+3.4 /{country_name}?date=yyyy-MM-dd
+аггрегированные данные по указанной стране, вплодь до указанной даты. если дата не указана - до сегодняшнего дня
+
+3.4 /total?date=yyyy-MM-dd
+аггрегированные данные по всем странам, вплодь до указанной даты. если дата не указана - до сегодняшнего дня
+
+если указана неверная страна или дата для данной страны вернуть - 404
+если все ок - 200
