@@ -8,7 +8,7 @@ def is_int(s):
 
 
 def what_to_do(data: list) -> int:
-    stat_man = True
+git    stat_man = True
     value = data
     number = int()
     b = []
