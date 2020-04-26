@@ -7,6 +7,8 @@ def is_int(s):
         return False
 
 
+
+
 def what_to_do(data: list) -> int:
 git    stat_man = True
     value = data
