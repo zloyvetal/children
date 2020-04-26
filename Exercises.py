@@ -37,10 +37,6 @@ def what_to_do(data: list) -> int:
     return number
 
 
-
-
-
-
 def main():
     checking = True
 
@@ -58,6 +54,28 @@ def main():
             print(what_to_do(input_value))
 
 
+def test_1():
+    data = list("1+2+3+4")
+
+    assert what_to_do(data) == 10
+
+
+def test_2():
+    data = list("1-2-3")
+
+    assert what_to_do(data) == -4
+
+
+def test_3():
+    data = list("1--2-3")
+
+    assert what_to_do(data) == 0
+
+
+def test_4():
+    data = list("1+-2-+3--4++5++-6")
+
+    assert what_to_do(data) == -1
 
 
 if __name__ == '__main__':
